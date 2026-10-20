@@ -1,0 +1,32 @@
+name: Release new lesson
+
+# Each new lessons/NN-*.md pushed to main becomes release "lesson-NN",
+# which notifies everyone watching the repo for Releases.
+on:
+  push:
+    branches: [main]
+    paths: ['lessons/*.md']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create a release per added lesson
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          for f in $(git diff --name-only --diff-filter=A "$BEFORE" "$GITHUB_SHA" -- 'lessons/*.md'); do
+            slug=$(basename "$f" .md)
+            nn=${slug%%-*}
+            gh release view "lesson-$nn" >/dev/null 2>&1 && continue
+            title=$(head -1 "$f" | sed 's/^# //')
+            gh release create "lesson-$nn" --target "$GITHUB_SHA" --title "$title" \
+              --notes "Read: https://mahditilab.github.io/search-engine-lessons/lessons/$slug.html"
+          done
