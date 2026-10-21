@@ -7,7 +7,7 @@ A daily, bite-sized course on how search engines work under the hood (Lucene, El
 ## Curriculum
 
 - [x] 1. [What a search engine is: documents, fields, index vs. database, full-text vs. exact match](lessons/01-what-is-a-search-engine.md) — 2026-10-20
-- [ ] 2. The inverted index: terms, postings lists, term dictionary
+- [x] 2. [The inverted index: terms, postings lists, term dictionary](lessons/02-inverted-index.md) — 2026-10-21
 - [ ] 3. The analysis pipeline overview: char filters → tokenizer → token filters
 - [ ] 4. Character filters (html_strip, mapping, pattern_replace)
 - [ ] 5. Tokenizers: standard, whitespace, keyword, letter, pattern, UAX URL/email
