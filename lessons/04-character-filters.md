@@ -107,7 +107,7 @@ Lesson 5: **tokenizers**: `standard`, `whitespace`, `keyword`, `letter`, `patter
 <summary><strong>Answers</strong></summary>
 
 1. By the time token filters run, the tokenizer has already split the text into `0`, `986`, `494`, `104`. A token filter sees single tokens and cannot merge neighbours back together. The separators have to be removed before tokenizing, which is the job of a char filter.
-2. `mapping` runs first and sees the literal text `&amp;`, which contains no `&` followed by whatever the rule needs to match the way you intended (the `&` inside `&amp;` would actually be replaced, giving `andamp;`). Then `html_strip` runs on the result. The output is garbled (`Tom andamp; Jerry`). Put `html_strip` first.
+2. `mapping` runs first and sees the raw text `Tom &amp; Jerry`. Its rule replaces the `&` inside `&amp;`, giving `Tom andamp; Jerry`. Then `html_strip` finds no entity left to decode. Put `html_strip` first.
 3. No. Lucene char filters record offset corrections, so token offsets are mapped back to positions in the original string and the highlighter marks the right characters.
 
 </details>
