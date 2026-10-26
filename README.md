@@ -10,7 +10,7 @@ A daily, bite-sized course on how search engines work under the hood (Lucene, El
 - [x] 2. [The inverted index: terms, postings lists, term dictionary](lessons/02-inverted-index.md) — 2026-10-21
 - [x] 3. [The analysis pipeline overview: char filters → tokenizer → token filters](lessons/03-analysis-pipeline.md) — 2026-10-22
 - [x] 4. [Character filters (html_strip, mapping, pattern_replace)](lessons/04-character-filters.md) — 2026-10-23
-- [ ] 5. Tokenizers: standard, whitespace, keyword, letter, pattern, UAX URL/email
+- [x] 5. [Tokenizers: standard, whitespace, keyword, letter, pattern, UAX URL/email](lessons/05-tokenizers.md) — 2026-10-26
 - [ ] 6. Token filters: lowercase, ASCII folding, stop words
 - [ ] 7. Stemming: Porter/Snowball, light vs. aggressive stemmers, over/under-stemming
 - [ ] 8. Lemmatization vs. stemming; language-specific analyzers (German: decompounding, umlauts)
