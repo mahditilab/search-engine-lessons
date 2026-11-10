@@ -11,7 +11,7 @@ A daily, bite-sized course on how search engines work under the hood (Lucene, El
 - [x] 3. [The analysis pipeline overview: char filters → tokenizer → token filters](lessons/03-analysis-pipeline.md) — 2026-10-22
 - [x] 4. [Character filters (html_strip, mapping, pattern_replace)](lessons/04-character-filters.md) — 2026-10-23
 - [x] 5. [Tokenizers: standard, whitespace, keyword, letter, pattern, UAX URL/email](lessons/05-tokenizers.md) — 2026-10-26
-- [ ] 6. Token filters: lowercase, ASCII folding, stop words
+- [x] 6. [Token filters: lowercase, ASCII folding, stop words](lessons/06-token-filters.md) — 2026-11-10
 - [ ] 7. Stemming: Porter/Snowball, light vs. aggressive stemmers, over/under-stemming
 - [ ] 8. Lemmatization vs. stemming; language-specific analyzers (German: decompounding, umlauts)
 - [ ] 9. Synonyms: index-time vs. search-time, synonym_graph
